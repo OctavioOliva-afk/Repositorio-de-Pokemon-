@@ -1,4 +1,3 @@
-
 let pokemones = [
   {
     nombre: "Pikachu",
@@ -27,6 +26,31 @@ let pokemones = [
     hp_total: 45,
     evolucion: true
   }
+  
+  // =========================================================================
+  // INICIO DE TU CONTRIBUCIÓN (Segundo PR)
+  // =========================================================================
+  , 
+  // NUEVO POKÉMON 1
+  {
+    nombre: "Meowth",
+    nivel: 8,
+    tipo: ["Normal"],
+    foto: "https://img.pokemondb.net/artwork/meowth.jpg",
+    hp: 40,
+    hp_total: 40,
+    evolucion: true 
+  }, 
+  // NUEVO POKÉMON 2
+  {
+    nombre: "Gengar",
+    nivel: 45,
+    tipo: ["Fantasma", "Veneno"],
+    foto: "https://img.pokemondb.net/artwork/gengar.jpg",
+    hp: 100,
+    hp_total: 100,
+    evolucion: false
+  }
 ];
 
 
@@ -51,7 +75,7 @@ function cargarPokemon() {
       evolucion: prompt("¿Tiene evolución? (si/no)") === "si"
     };
 
-   
+    
     nuevo.hp = nuevo.hp_total;
     pokemones.push(nuevo);
 
@@ -103,6 +127,5 @@ do {
       console.log("Opción inválida.");
   }
 } while (opcion !== "4");
-
 
 
