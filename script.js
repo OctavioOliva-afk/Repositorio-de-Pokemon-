@@ -1,4 +1,3 @@
-
 let pokemones = [
   {
     nombre: "Pikachu",
@@ -27,6 +26,31 @@ let pokemones = [
     hp_total: 45,
     evolucion: true
   }
+  
+  // =========================================================================
+  // INICIO DE TU CONTRIBUCIÓN (Pokemones agregados para el PR)
+  // =========================================================================
+  , // Importante: la coma separa el último Pokémon inicial del primer Pokémon agregado
+  // NUEVO POKÉMON 1
+  {
+    nombre: "Meowth",
+    nivel: 8,
+    tipo: ["Normal"],
+    foto: "https://img.pokemondb.net/artwork/meowth.jpg",
+    hp: 40,
+    hp_total: 40,
+    evolucion: true 
+  }, 
+  // NUEVO POKÉMON 2
+  {
+    nombre: "Gengar",
+    nivel: 45,
+    tipo: ["Fantasma", "Veneno"],
+    foto: "https://img.pokemondb.net/artwork/gengar.jpg",
+    hp: 100,
+    hp_total: 100,
+    evolucion: false
+  }
 ];
 
 
@@ -51,7 +75,7 @@ function cargarPokemon() {
       evolucion: prompt("¿Tiene evolución? (si/no)") === "si"
     };
 
-   
+    
     nuevo.hp = nuevo.hp_total;
     pokemones.push(nuevo);
 
@@ -71,6 +95,7 @@ function restarHP() {
     let daño = Number(prompt("Ingrese la cantidad de HP a restar:"));
     poke.hp -= daño;
     if (poke.hp < 0) poke.hp = 0;
+    // La plantilla literal se repara aquí para que funcione correctamente
     console.log(`${poke.nombre} ahora tiene ${poke.hp}/${poke.hp_total} HP`);
   } else {
     console.log("Pokémon no encontrado.");
@@ -103,6 +128,3 @@ do {
       console.log("Opción inválida.");
   }
 } while (opcion !== "4");
-
-
-
