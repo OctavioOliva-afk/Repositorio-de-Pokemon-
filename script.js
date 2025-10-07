@@ -25,6 +25,15 @@ let pokemones = [
     hp: 45,
     hp_total: 45,
     evolucion: true
+  },
+  {
+    nombre: "Squirtle",
+    nivel: 10,
+    tipo: ["Agua"],
+    foto: "https://img.pokemondb.net/artwork/bulbasaur.jpg",
+    hp: 45,
+    hp_total: 45,
+    evolucion: true
   }
   
   // =========================================================================
